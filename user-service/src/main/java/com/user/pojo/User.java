@@ -59,6 +59,10 @@ public class User {
 		return "User [id=" + id + ", fname=" + fname + ", lname=" + lname + ", contacts=" + contacts + "]";
 	}
 
+	public User() {
+		super();
+	}
+
 	
 	
 	

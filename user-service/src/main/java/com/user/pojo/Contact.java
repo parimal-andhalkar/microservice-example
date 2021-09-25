@@ -37,6 +37,16 @@ public class Contact {
 	public String toString() {
 		return "Contact [id=" + id + ", mobile=" + mobile + ", email=" + email + ", userId=" + userId + "]";
 	}
+	public Contact(int id, String mobile, String email, String userId) {
+		
+		this.id = id;
+		this.mobile = mobile;
+		this.email = email;
+		this.userId = userId;
+	}
+	public Contact() {
+		
+	}
 	
 	
 	
