@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.user.pojo.Contact;
 import com.user.pojo.User;
-import com.user.service.ContactInfo;
+import com.user.service.ContactInfoService;
 import com.user.service.UserService;
 
 @RestController
@@ -25,7 +25,7 @@ public class UserController {
 	RestTemplate restTemplate;
 	
 	@Autowired
-	ContactInfo contactInfo;
+	ContactInfoService contactInfo;
 
 	@GetMapping("/{userId}")
 	public User getUser(@PathVariable("userId") int userId) {

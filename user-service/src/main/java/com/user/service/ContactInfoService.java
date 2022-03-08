@@ -11,7 +11,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.user.pojo.Contact;
 
 @Service
-public class ContactInfo {
+public class ContactInfoService {
 	
 	@Autowired
 	RestTemplate restTemplate;
@@ -19,7 +19,7 @@ public class ContactInfo {
 	@HystrixCommand(fallbackMethod = "getContactDetailsDownTime")
 	public List<Contact> getContactDetails(int userId){
 		
-		List contactList = restTemplate.getForObject("http://CONTACT-SERIVE/contact/" + userId, List.class);
+		List contactList = restTemplate.getForObject("http://CONTACT-SERVICE/contact/" + userId, List.class);
 		
 		return contactList;
 	}

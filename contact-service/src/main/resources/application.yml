@@ -1,6 +1,6 @@
 server:
-  port: 9001
+  port: 8080
   
-spring:  application:    name: contact-serive  
+spring:  application:    name: contact-service  
     
 #eureka: # instance:  #  hostname: localhost    

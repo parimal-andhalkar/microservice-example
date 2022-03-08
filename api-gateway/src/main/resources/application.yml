@@ -7,12 +7,12 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: user-service1
-        uri: lb://user-service
+      - id: user-service
+        uri: lb://user-service           #this is spring service application name for user service MS 
         predicates:
         - Path=/user/**
       - id: contact-service
-        uri: lb://contact-service
+        uri: lb://contact-service          #this is spring service application name for contact service MS 
         predicates:
         - Path=/contact/**
             
